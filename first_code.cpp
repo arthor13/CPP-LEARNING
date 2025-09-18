@@ -3,6 +3,7 @@
 
 int main()
 {
+    //Estou compilando meu código utilizando G++ -> gpp(alias) name_of_file.cpp -o directory(optional)/name_of_the_output_file
     //Comentáario em C++
    //Tipos básicos de dados em C++
     int age = 2025;
