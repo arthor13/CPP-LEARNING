@@ -29,4 +29,8 @@ int main()
    std::cout << "Size of bool: " << sizeof(bool) << "bytes" << std::endl;
    std::cout << "Size of string: " << sizeof(std::string) << "bytes" << std::endl;
     
+   //Array em C++
+   std::string lista[] = {"Lista", "em", "C++"};
+    std::cout << lista[0] << std::endl;
+    lista[0] = "Teste";
 }
