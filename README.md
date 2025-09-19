@@ -10,7 +10,11 @@ Mas se alguém quiser utilizar para estudar, pode ser um bom ponto de partida ta
 ⚠️ **Observações:**  
 - O repositório ainda não está completo (estou aprendendo aos poucos).  
 - Muitos exemplos são básicos, mas com bastante explicação nos comentários.  
-- A ideia é evoluir o repositório conforme avanço nos estudos.  
+- A ideia é evoluir o repositório conforme avanço nos estudos.
+
+🎯 **Objetivo final do aprendizado:**  
+Com o tempo, quero aplicar o conhecimento adquirido para desenvolver uma **game engine 2D em C++**, voltada inicialmente para criar **jogos roguelike**.  
+
 
 ---
 
