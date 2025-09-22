@@ -93,6 +93,7 @@ int main()
                                 EXISTE UMA FUNÇÃO UTILIZANDO A BIBLIOTECA <limits> QUE É std::numeric_limits<std::streamsize>::max()
                                 E SE VOCÊ COLOCAR ELA NO PRIMEIRO PARAMETRO DA cin.ignore() TODO O BUFFER SERÁ IGNORADO, INDEPENDENTE DO TAMANHO DO INPUT DO USUÁRIO
                                 !!!! LEMBRE SEMPRE DE COLOCAR O '\n' NO SEGUNDO PARAMETRO (QUE É O DE PARADA), PORQUE SE NÃO VOCÊ PODE IGNORA OS PRÓXIMOS INPUTS DO PROGRAMA
+                              EXISTE UMA FUNÇÃO CHAMADA cin.good() QUE VERIFICA SE O INPUT FOI DIFERENTE DO ESPERADO, BOM PRA VERIFICAR SE O INPUT FOI DIFERENTE DO ESPERADO
     */
 
     /*
