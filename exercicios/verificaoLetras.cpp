@@ -65,11 +65,25 @@ Duis vestibulum turpis sed magna ultricies interdum.Ut consequat elit ut fringil
                 ss << ' ' << sobra;
             }
             //ELE VAI BUSCAR O INDEX DO MAPA ONDE EXISTE A PALAVRA,
-            //SE NÃO EXISTE AUTOMATICAMENTE É CRIADO E ATRIBUIDO + 1 PRA ELE
-            contagemPalavras[formatada] += 1;
-
-            std::cout << formatada << std::endl;
-            std::cout << "Aparições até agora " << contagemPalavras[formatada] << std::endl;
+            contagemPalavras[formatada] +=1;
+            /*
+                PARA GARANTIR QUE NÃO HAJA ERRO, PORÉM EU ACREDITO QUE A VERSÃO ACIMA SEJA SUFICIENTE, POIS SABEMOS QUE CASO UM MAPA NÃO EXISTA ELE IRÁ AUTOMATICAMENTE ADICIONAR UM VALOR = 0 À ELE;
+            if (contagemPalavras.find(formatada) == contagemPalavras.end())
+                {
+                    contagemPalavras.insert({formatada, 1});
+                }
+            else contagemPalavras[formatada] +=  1;
+            */
+            //std::cout << formatada << std::endl;
+        }
+        //PAIR É UM TIPO DE DADO MAIS NOVO QUE BASICAMENTE É UM PAR DE DADOS, NO CASO O NOSSO MAPA É UMA STRING E UM INTEIRO
+        //ENTÃO NOS FAREMOS UMA ITERAÇÃO PARA CADA PAR DE STRINGS E INTEIROS NO NOSSO MAPA
+        //E NA HORA DE IMPRIMIR TEMOS QUE FALAR .first PARA O PRIMEIRO DADO DO PARA E .second PARA O SEGUNDO
+        //OBS: SE VC NÃO QUISER ALTERAR O VALOR DOS DADOS É PRECISO ADICIONAR O CONST NA STRING, POIS ELA É A KEY DO MAPA E UM & PARA REFERENCIAR O DADO E NÃO COPIÁ-LO
+        //SE QUISER ALTERAR BASTA TIRAR O CONST E O &
+        for (std::pair<const std::string, int> & pair : contagemPalavras)
+        {
+            std::cout << "a palavra " << pair.first << " é repetida " << pair.second << std::endl;
         }
 
 }
