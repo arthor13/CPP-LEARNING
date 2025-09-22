@@ -10,10 +10,13 @@
 #include <string>
 // Para limpar literalmente todo o buffer de input é preciso importar essa library
 #include <limits>
+// String Stream EXPLICACAO NO ARQUIVO exercicios/verificaoLetras.cpp
+#include <sstream>
 /*
     Estou usando um curso da udemy chamado *Learn C++ and make a game from scratch* e um curso do youtube -> https://www.youtube.com/watch?v=-TkoO8Z07hI
     Quando vc ver algo entre ** nos comentários é basicamente o código que voce digitaria, tem vezes que eu utilizo elas e tem vezes que não
 */
+
 
 namespace first
 {
@@ -60,6 +63,9 @@ int main()
 
             SÓ UM LEMBRETE -> UTILIZAR STD::ENDL AO FINAL DE TODO PRINT PODE CAUSAR PROBLEMAS DE MEMÓRIA E AUMENTAR A RUNTIME EM PROGRAMAS QUE IMPRIMEM MUITAS LINHAS,
             NESSES CASOS É MELHOR SOMENTE UTILIZAR O \n
+            INPUT DE MULTIPLAS LINHAS, ISSO VAI BASICAMENTE RECEBER TUDO, ATÉ MESMO TAB, ENTÃO TOME CUIDADO NA HORA
+                std::string stringName = R"""(
+                                                )"""
 
             INTERESSANTE ->
                 ASSIM COMO VÁRIAS SITUAÇÕES EM C++ QUE NORMALMENTE ACUSARIAM ERRO EM OUTRA LINGUAGEM, PORÉM AQUI NÃO ACUSA É A QUESTÃO DO INPUT DE DADO ERRADO
