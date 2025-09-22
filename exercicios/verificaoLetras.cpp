@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-
+#include <map>
 int main()
 {
     std::string teste = R"""(Lorem ipsum dolor sit amet,consectetur adipiscing elit.Aenean semper leo vel augue fermentum, in blandit sapien mollis. Fusce sed tortor nec magna ullamcorper dapibus. Aliquam quis libero aliquet arcu luctus sagittis in vitae risus. Aliquam in nibh vehicula, vehicula est eget, sollicitudin tellus. Cras aliquet id elit id pharetra. Curabitur vel tortor nulla. Nunc sit amet sem arcu.
@@ -34,6 +34,9 @@ Duis vestibulum turpis sed magna ultricies interdum.Ut consequat elit ut fringil
 
     //BASICAMENTE ENQUANTO TIVER PALAVRAS PRA PASSA O LOOP SERÁ FEITO, QUANDO NÃO TIVER IRÁ RETORNAR EOF QUE DARÁ FALSO E O LOOP VAI PARAR
     //ELE CONTABILIZA WHITESPACES, OU SEJA PONTUAÇÃO COLADA NAS PALAVRAS SERÁ CONTABILIZADO COMO UMA PALAVRA
+    //MAPA PARA A CONTAGEM DE PALAVRAS
+    std::map<std::string, int> contagemPalavras;
+
     while(ss >> proxStr)
         {
             //TRANSFORMAR EM LOWER CASE
@@ -49,7 +52,7 @@ Duis vestibulum turpis sed magna ultricies interdum.Ut consequat elit ut fringil
                     //std::tolower() POE EM LETRA MINUSCULA
                     formatada.push_back(std::tolower(c));
                 }//CASO NÃO SEJA ALFABETICA DA BREAK, ISSO É IMPORTANTE POIS, COMO PODEMOS OBSERVAR NO TEXTO INPUTADO HÁ CASOS EM QUE EXISTE PONTUAÇÃO SEPARANDO DUAS PALAVRAS
-                 //SEM WHITESPACE O QUE IŔA FAZER COM QUE A PALAVRA FICA CONJUNTA TIPO Lorem,Ipsum
+                //SEM WHITESPACE O QUE IŔA FAZER COM QUE A PALAVRA FICA CONJUNTA TIPO Lorem,Ipsum
                 else break;
             }
             //PARA RESOLVER A SITUAÇÃO ACIMA VERIFICAMOS SE O ID, QUE É ADICIONADO PREVIAMENTE EM TODA ITERAÇÃO DO CARACTER DA NOSSA STRING, É DIFERENTE DO ÚLTIMO ID DA NOSSA STRING
@@ -61,8 +64,12 @@ Duis vestibulum turpis sed magna ultricies interdum.Ut consequat elit ut fringil
                 std::string sobra = proxStr.substr(id);
                 ss << ' ' << sobra;
             }
+            //ELE VAI BUSCAR O INDEX DO MAPA ONDE EXISTE A PALAVRA,
+            //SE NÃO EXISTE AUTOMATICAMENTE É CRIADO E ATRIBUIDO + 1 PRA ELE
+            contagemPalavras[formatada] += 1;
 
             std::cout << formatada << std::endl;
+            std::cout << "Aparições até agora " << contagemPalavras[formatada] << std::endl;
         }
 
 }
