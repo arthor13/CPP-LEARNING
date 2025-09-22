@@ -7,8 +7,7 @@ int main()
     auto stopCondition = false;
     
     while(!stopCondition){
-        int condicao;
-        int numero;
+        int condicao, numero;
         cout << "Deseja continuar realizando operações ? (DIGITE 1 PRA SIM E 0 PRA NÃO)\n";
         cin >> condicao;
 
