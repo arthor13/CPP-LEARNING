@@ -12,6 +12,8 @@
 #include <limits>
 // String Stream EXPLICACAO NO ARQUIVO exercicios/verificaoLetras.cpp
 #include <sstream>
+//Biblioteca pra gerar random numbers, explicada no arquivo de smallestNumber
+#include <random>
 /*
     Estou usando um curso da udemy chamado *Learn C++ and make a game from scratch* e um curso do youtube -> https://www.youtube.com/watch?v=-TkoO8Z07hI
     Quando vc ver algo entre ** nos comentários é basicamente o código que voce digitaria, tem vezes que eu utilizo elas e tem vezes que não
