@@ -3,6 +3,8 @@
 #include <vector>
 #include <iomanip> //É PRECISO DESSA BIBLIOTECA PARA UTILIZAR A .time()
 
+//BASICAMENTE É BOM UTILIZAR const NO PARAMETRO DA FUNÇÃO QUANDO NAO VAMOS ALTERAR NADA NELA, PARA INDICAR QUE ELA NAO SER ALTERADA, POR EXEMPLO NUMA FUNCAO DE PRINT TAL QUAL NA printVetor() 
+
 void sortVetor(int n, std::vector<int>& vetor, int& iteracoes)
     {
         if (n >= vetor.size() -1 )
@@ -22,6 +24,15 @@ void sortVetor(int n, std::vector<int>& vetor, int& iteracoes)
         vetor[n] = vetor[i];
         vetor[i] = temp;
         sortVetor(n + 1, vetor, iteracoes);
+        //EXISTE UMA FUNÇÃO CHAMADA .swap(coisa1,coisa2); AO INVÉS DE FAZER UM SWAP MANUAL EU PODERIA TER USADO ESSA FUNÇÃOff
+    }
+
+void printVetor(const std::vector<int>& vetor)
+    {
+        for (int num : vetor)
+        {
+            std::cout << num << std::endl;
+        }
     }
 
 
@@ -63,9 +74,7 @@ int main()
         
     std::cout << "O menor número é: " << menor << std::endl;
     int n = 0;
-    sortVetor(0, randomNumber, n);
-    for (int num : randomNumber)
-        {
-            std::cout << num << std::endl;
-        }
+    sortVetor(0, randomNumber, n );
+    printVetor(randomNumber);
+
 }
