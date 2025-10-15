@@ -44,5 +44,8 @@ int main()
     if (ponteiroFraco2.expired())
     {
         std::cout  << "Ponteiro Fraco expirado, pois todos os shared foram resetados. REF COUNT = 0";
-    }    
+    }  
+    //ARRAY NA HEAP
+    int* array = new int[5];
+    delete[] array;
 }
